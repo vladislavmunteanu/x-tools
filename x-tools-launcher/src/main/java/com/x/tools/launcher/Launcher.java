@@ -18,38 +18,21 @@ public class Launcher {
     private Configuration configuration;
     private LoggerManager loggerManager;
 
-    private static String TOOLS_CONF = "conf/tools.yaml";
-    private static String ALIASES_CONF = "conf/aliases.yaml";
+    private static final String FAILED_TO_LUNCH = "Failed to lunch tools";
     private static final Logger logger = LoggerFactory.getLogger(Launcher.class);
 
     public Launcher() {
-
         try {
-            this.configuration = buildConfiguration();
+            this.configuration = Configuration.getInstance();
             this.loggerManager = LoggerManager.getInstance();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (ToolsException e) {
+            logger.error(FAILED_TO_LUNCH);
+            throw new RuntimeException(FAILED_TO_LUNCH,e);
         }
-
     }
 
     public Configuration getConfiguration() {
         return configuration;
-    }
-
-    private static Configuration buildConfiguration() throws IOException {
-
-        Yaml yaml = new Yaml();
-
-        InputStream toolsStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(TOOLS_CONF);
-        InputStream aliasStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(ALIASES_CONF);
-        SequenceInputStream confStream = new SequenceInputStream(toolsStream, aliasStream);
-
-        Configuration config = yaml.loadAs(confStream, Configuration.class);
-
-        Utils.closeStreams(toolsStream, aliasStream, confStream);
-
-        return config;
     }
 
     public LoggerManager getLoggerManager() {
@@ -77,7 +60,6 @@ public class Launcher {
         }
 
         logger.info("Done");
-
     }
 
 

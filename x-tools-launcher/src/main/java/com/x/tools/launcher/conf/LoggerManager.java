@@ -34,6 +34,30 @@ public class LoggerManager {
         LogManager.getLogger(classPath).addAppender(appender);
     }
 
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
+    }
+
+    public String getLayout() {
+        return layout;
+    }
+
+    public void setLayout(String layout) {
+        this.layout = layout;
+    }
+
+    public String getFolder() {
+        return folder;
+    }
+
+    public void setFolder(String folder) {
+        this.folder = folder;
+    }
+
     private static LoggerManager buildLoggerManager() {
 
         Yaml yaml = new Yaml();
@@ -74,28 +98,6 @@ public class LoggerManager {
         }
     }
 
-    public String getLevel() {
-        return level;
-    }
 
-    public void setLevel(String level) {
-        this.level = level;
-    }
-
-    public String getLayout() {
-        return layout;
-    }
-
-    public void setLayout(String layout) {
-        this.layout = layout;
-    }
-
-    public String getFolder() {
-        return folder;
-    }
-
-    public void setFolder(String folder) {
-        this.folder = folder;
-    }
 
 }
