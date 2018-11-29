@@ -15,17 +15,12 @@
     <name>X Internal Tools : Sample</name>
     <description>X Internal Tools</description>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <kotlin.version>1.2.21</kotlin.version>
-    </properties>
-
     <dependencies>
 
         <dependency>
             <groupId>com.x-tools</groupId>
             <artifactId>x-tools-core</artifactId>
-            <version>1.0.0</version>
+            <version>${x.tools.version}</version>
         </dependency>
         
         <dependency>
@@ -37,7 +32,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
 
