@@ -1,0 +1,7 @@
+tools:
+
+  - toolName: start_services
+    classPath: com.edifecs.tools.Start
+
+  - toolName: stop_service
+    classPath: com.edifecs.tools.Stop

@@ -1,0 +1,15 @@
+# add aliases below this line
+
+aliases:
+
+  - name: als_1
+    toolName: tool_1
+    args:
+      - par_1
+      - par_2
+
+  - name: als_2
+    toolName: tool_2
+    args:
+      - par_3
+      - par_4

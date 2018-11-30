@@ -1,0 +1,3 @@
+level: INFO
+layout: "%d{yyyy-MM-dd HH:mm:ss} %-5p - %m%n"
+folder: testFolder
