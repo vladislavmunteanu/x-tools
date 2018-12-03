@@ -2,6 +2,7 @@ package com.x.tools.launcher.test
 
 import com.x.tools.launcher.Launcher
 import org.junit.Test
+import org.junit.runner.RunWith
 import kotlin.test.assertEquals
 
 class ConfigurationTest{

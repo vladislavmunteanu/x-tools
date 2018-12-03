@@ -2,13 +2,13 @@ package com.x.tools.core.conf;
 
 import java.util.List;
 
-public class ToolConf {
+public class Task {
 
     private String toolName;
     private String classPath;
+    private List<String> args;
 
-    public ToolConf(){}
-
+    public Task(){}
 
     public String getToolName() {
         return toolName;
@@ -29,5 +29,13 @@ public class ToolConf {
     @Override
     public String toString() {
         return toolName;
+    }
+
+    public List<String> getArgs() {
+        return args;
+    }
+
+    public void setArgs(List<String> args) {
+        this.args = args;
     }
 }

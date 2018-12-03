@@ -1,7 +1,10 @@
 tools:
 
-  - toolName: start_services
-    classPath: com.edifecs.tools.Start
+  - toolName: sample_tool
+    classPath: com.x.tools.sample.SampleTool
+    args:
+      - sample_string
+      - 765
 
-  - toolName: stop_service
-    classPath: com.edifecs.tools.Stop
+#  - toolName: stop_service
+#    classPath: com.edifecs.tools.Stop

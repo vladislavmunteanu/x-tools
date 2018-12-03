@@ -1,7 +1,7 @@
 package com.x.tools.launcher.conf;
 
 import com.x.tools.core.conf.Alias;
-import com.x.tools.core.conf.ToolConf;
+import com.x.tools.core.conf.Task;
 import com.x.tools.core.exceptions.ToolsException;
 import com.x.tools.core.utils.Utils;
 import org.slf4j.Logger;
@@ -15,7 +15,7 @@ import java.util.List;
 
 public class Configuration {
 
-    private List<ToolConf> tools;
+    private List<Task> tools;
     private List<Alias> aliases;
 
     private static Configuration instance;
@@ -47,11 +47,11 @@ public class Configuration {
         this.aliases = aliases;
     }
 
-    public List<ToolConf> getTools() {
+    public List<Task> getTools() {
         return tools;
     }
 
-    public void setTools(List<ToolConf> tools) {
+    public void setTools(List<Task> tools) {
         this.tools = tools;
     }
 
